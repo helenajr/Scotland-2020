@@ -15,9 +15,10 @@ person_totals
 as.data.frame(person_totals)
 colnames (person_totals) <- c("name", "amount_spent")
 
-num_people <- 2
+num_people <- 3
 
 expense_per_head <- sum(person_totals$amount_spent)/ num_people
 
 person_totals <- person_totals %>%
   mutate("balance" = (expense_per_head - amount_spent))
+person_totals
